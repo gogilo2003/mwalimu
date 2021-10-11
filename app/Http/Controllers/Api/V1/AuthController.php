@@ -16,7 +16,8 @@ class AuthController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required',
+            'token_name' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -40,5 +41,14 @@ class AuthController extends Controller
     function user(Request $request)
     {
         return $request->user();
+    }
+
+    public function token(Request $request)
+    {
+        $token = $request->user()->createToken('token');
+
+        return $this->respondWithSuccess([
+            'token' => $token->plainTextToken
+        ]);
     }
 }

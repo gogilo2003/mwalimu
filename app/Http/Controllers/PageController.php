@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 class PageController extends Controller
 {
     /**
-     * Display icons page
+     * Display dashboard page
      *
      * @return \Illuminate\View\View
      */
-    public function icons()
+    public function subjects()
     {
-        return view('pages.icons');
+        return view('pages.subjects');
     }
 
     /**
