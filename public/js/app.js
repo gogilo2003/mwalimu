@@ -2116,6 +2116,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 axios.defaults.withCredentials = true;
 axios.defaults.headers.Accept = 'application/json';
+axios.defaults.headers.Authorization = "Bearer j3ebt03jKvH85NWUBBS503U2qOkzkc5DfLWCkLbd";
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"];
 /**
  * The following block of code may be used to automatically register your

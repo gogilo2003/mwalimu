@@ -19,7 +19,7 @@ export default {
       axios
         .get("/api/v1/subjects")
         .then((response) => {
-            this.subjects = response.data.data;
+          this.subjects = response.data.data;
         })
         .catch((error) => {
           console.log(error);

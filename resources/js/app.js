@@ -10,7 +10,7 @@ require('./bootstrap');
 
 axios.defaults.withCredentials = true;
 axios.defaults.headers.Accept = 'application/json'
-
+axios.defaults.headers.Authorization = "Bearer j3ebt03jKvH85NWUBBS503U2qOkzkc5DfLWCkLbd"
 window.Vue = require('vue').default;
 
 /**
