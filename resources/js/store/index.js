@@ -6,6 +6,6 @@ import schools from './schools'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-    state,
+    modules:{schools}
 })
 
