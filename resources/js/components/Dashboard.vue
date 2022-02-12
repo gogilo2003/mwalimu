@@ -158,41 +158,17 @@
         </div>
     </div>
 </template>
-<script lang="javascript">
+<script>
 export default {
     data: () => {
         return {
             selected: [],
-            tasks: [
-                {
-                    title: "Update the Documentation",
-                    description: "Dwuamish Head, Seattle, WA 8:47 AM",
-                },
-                {
-                    title: "GDPR Compliance",
-                    description:
-                        "The GDPR is a regulation that requires businesses to protect the personal data and privacy of Europe citizens for transactions that occur within EU member states.",
-                },
-                {
-                    title: "Solve the issues",
-                    description:
-                        "Fifty percent of all respondents said they would be more likely to shop at a company",
-                },
-                {
-                    title: "Release v2.0.0",
-                    description: "Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM",
-                },
-                {
-                    title: "Export the processed files",
-                    description:
-                        "The report also shows that consumers will not easily forgive a company once a breach exposing their personal data occurs.",
-                },
-                {
-                    title: "Arival at export process",
-                    description: "Capitol Hill, Seattle, WA 12:34 AM",
-                },
-            ],
         };
+    },
+    computed:{
+        tasks(){
+            return this.$store.state.tasks
+        }
     },
     methods: {
         checked(index) {

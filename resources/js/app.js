@@ -7,6 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
+import store  from './store'
 
 /**
  * The following block of code may be used to automatically register your
@@ -29,5 +30,6 @@ Vue.component('dashboard', require('./components/Dashboard.vue').default);
  */
 
 const app = new Vue({
+    store,
     el: '#app',
 });
