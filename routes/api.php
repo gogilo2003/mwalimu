@@ -19,12 +19,13 @@ use App\Http\Controllers\Api\V1\SubjectController;
 Route::name('api.v1')->prefix('v1')->group(function () {
     Route::middleware('auth:sanctum')->group(function () {
         Route::get('/user', [AuthController::class, 'user'])->name('.user');
+        Route::get('/token', [AuthController::class, 'token'])->name('.token');
 
-        Route::prefix('subjects')->group(function(){
-            Route::get('',[SubjectController::class,'index']);
+        Route::name('.subjects')->prefix('subjects')->group(function(){
+            Route::get('{id?}',[SubjectController::class,'index']);
             Route::post('',[SubjectController::class,'store'])->name('.store');
             Route::patch('',[SubjectController::class,'update'])->name('.update');
-            Route::delete('',[SubjectController::class,'destroy'])->name('delete');
+            Route::delete('{id}',[SubjectController::class,'destroy'])->name('.delete');
         });
     });
 

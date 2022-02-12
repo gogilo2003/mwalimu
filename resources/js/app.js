@@ -4,8 +4,13 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+const { default: axios } = require('axios');
+
 require('./bootstrap');
 
+axios.defaults.withCredentials = true;
+axios.defaults.headers.Accept = 'application/json'
+axios.defaults.headers.Authorization = "Bearer j3ebt03jKvH85NWUBBS503U2qOkzkc5DfLWCkLbd"
 window.Vue = require('vue').default;
 import store  from './store'
 
@@ -22,6 +27,7 @@ import store  from './store'
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('dashboard', require('./components/Dashboard.vue').default);
+Vue.component('subjects', require('./components/Subjects.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
